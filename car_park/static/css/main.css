@@ -1,0 +1,101 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    font-family: sans-serif;
+}
+  
+header a{
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+header{
+    background-color: dodgerblue;
+    padding: 20px;
+    color: white;
+}
+
+.main-body{
+    min-height: 400px;
+    padding: 20px;
+}
+.jumbotron{
+    background-color: lightgrey;
+    padding: 200px;
+}
+
+
+.myfield{
+    width: 85%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.151);
+    padding: 10px;
+    border-radius: 5px;
+}
+.form{
+    width: 400px;
+    border: 1px rgba(0, 0, 0, 0.212) solid;
+    margin: auto;
+    padding: 20px;
+    border-radius: 7px;
+}
+.mybtn{
+    background-color: dodgerblue;
+    border-radius: 7px;
+    padding: 13px;
+    text-decoration: none;
+    color: white;
+    border: none;
+}
+.flash{
+ color: dodgerblue;
+ border-radius: 5px;
+ border: 1px solid dodgerblue;
+}
+
+th{
+background-color: dodgerblue;
+color: white;
+}
+.form-split{
+    display: flex;
+    justify-content: space-between;
+    width: 52%;
+}
+.form a{
+    color: dodgerblue;
+    text-decoration: none;
+
+}
+
+.dash{
+    display: flex;
+}
+.right-container{
+    margin-left: 20px;
+    width: 80%;
+    border: 1px rgba(0, 0, 0, 0.212) solid;
+    padding:20px;
+    border-radius: 7px;
+}
+.danger{
+    background-color: rgb(240, 151, 151);
+    color: white;
+}
+
+.success{
+    background-color: rgb(11, 235, 11);
+    color: white;
+}
+footer{
+    text-align: center;
+    color: white;
+    background-color: dodgerblue;
+    padding: 20px;
+}
+.options{
+    padding: 100px;
+}

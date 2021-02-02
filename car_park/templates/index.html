@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+    <div class="jumbotron">
+        <center>
+            
+        <div class="options">
+            <h1>Welcome</h1>
+            <p>Admin Login</p>
+            <a href="{{url_for('login')}}" class="btn btn-primary">Login</a>
+            <a href="{{url_for('create_admin')}}" class="btn btn-primary">Sign Up</a>
+        </div>
+        </center>
+    </div>
+{% endblock body %}
+    

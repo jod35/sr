@@ -1,0 +1,55 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages()%}
+{% if messages %}
+    {% for message in messages %}
+         <div class="flash">
+             {{ message }}
+         </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="">
+    <form action="{{url_for('add_parking_record')}}" method="post">
+    <h3>Add Parking Record</h3>
+    <div class="form-split">
+        <div class="left">
+            <div class="form-group">
+                <label for="vehicle_name">Vehicle Name</label>
+                <input type="text" name="vehicle_name" id="" class="form-control">
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Number Plate</label>
+                <input type="text" name="num_plate" id="" class="form-control">
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Owner</label>
+                <input type="text" name="owner" id="" class="form-control">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="form-group">
+                <label for="vehicle_name">Owner's Phone Contact</label>
+                <input type="text" name="contact" id="" class="form-control">
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Date Parked</label>
+                <input type="datetime" name="date" id="" value="{{date}}" class="form-control" readonly>
+                
+            </div>
+        
+           
+        </div>
+        </div>
+        <input type="submit" value="Save Record" class="btn btn-primary">
+    </form>
+    </div>
+</div>
+{% endblock content %}
+    

@@ -1,0 +1,71 @@
+{% extends 'dashboard.html' %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages()%}
+{% if messages %}
+    {% for message in messages %}
+         <div class="flash">
+             {{ message }}
+         </div>
+    {% endfor %}
+{% endif %}
+{% endwith %}
+<div class="">
+    <form action="/manage/{{rec.id}}" method="post">
+    <h3>Update Parking Record</h3>
+    <div class="form-split">
+        <div class="left">
+            <div class="form-group">
+      
+                <label for="vehicle_name">Vehicle Name</label>
+                <input type="text" name="vehicle_name" id="" class="form-control" value="{{rec.vehicle_name}}">
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Number Plate</label>
+                <input type="text" name="num_plate" id="" class="form-control" value="{{rec.num_plate}}">
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Owner</label>
+                <input type="text" name="owner" id="" class="form-control" value="{{rec.owner}}">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="form-group">
+                <label for="vehicle_name">Owner's Phone Contact</label>
+          
+                <input type="text" name="contact" id="" class="form-control" value="{{rec.contact}}"> 
+            </div>
+        
+            <div class="form-group">
+                <label for="vehicle_name">Date Parked</label>
+                <input type="datetime" name="date" id="" value="{{rec.date_parked}}" class="form-control" readonly>
+                
+            </div>
+           
+           <div>
+           </div>
+           
+        </div>
+        </div>
+        <input type="submit" value="Save Record" class="btn btn-primary">
+        <a href="" class="btn btn-danger">Delete Record</a>
+    </form>
+    <br>
+     
+     {% if rec.payment == False%}
+     <form action="/pay/{{rec.id}}" method="post">
+        <input type="submit" class="btn btn-primary" value="Set Payment To Paid">
+    </form>
+    <br>
+    <a href="{{url_for('manage_records')}}" class="btn btn-primary">Back</a>
+
+     {% endif %}
+         
+    </div>
+</div>
+{% endblock content %}
+    
